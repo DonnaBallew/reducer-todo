@@ -31,8 +31,8 @@ const TodoForm = ({ dispatch }) => {
           placeholder="Enter new task"
           onChange={handleChanges}
         />
-        <button onClick={submitForm}>Submit</button>
-        <button onClick={clearCompleted}>Clear Completed</button>
+        <button onClick={submitForm}>Add Task</button>
+        <button onClick={clearCompleted}>Remove Completed Task</button>
       </form>
     </div>
   );

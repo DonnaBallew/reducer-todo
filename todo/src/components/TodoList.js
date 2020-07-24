@@ -9,7 +9,6 @@ import Todo from "./Todo";
 
 const TodoList = () => {
   const [state, dispatch] = useReducer(todoReducer, todo);
-  //initialState, reducer
 
   return (
     <div className="list">
