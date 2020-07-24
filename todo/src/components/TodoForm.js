@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 
 const TodoForm = ({ dispatch }) => {
-  const [task, setTask] = useState("");
+  const [item, setItem] = useState("");
 
   const handleChanges = (e) => {
-    setTask(e.target.value);
+    setItem(e.target.value);
   };
 
   const submitForm = (e) => {
     e.preventDefault();
     dispatch({
       type: "ADD_TASK",
-      payload: task,
+      payload: item,
     });
-    setTask("");
+    setItem("");
   };
 
   const clearCompleted = (e) => {
@@ -25,7 +25,12 @@ const TodoForm = ({ dispatch }) => {
   return (
     <div className="todoList">
       <form onSubmit={submitForm}>
-        <input type="text" name="todo" placeholder="Enter new task" />
+        <input
+          type="text"
+          name="todo"
+          placeholder="Enter new task"
+          onChange={handleChanges}
+        />
         <button onClick={submitForm}>Submit</button>
         <button onClick={clearCompleted}>Clear Completed</button>
       </form>

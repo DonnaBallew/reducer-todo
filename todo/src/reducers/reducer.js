@@ -1,4 +1,4 @@
-export const initialState = [
+const todo = [
   {
     item: "Learn about reducers",
     completed: false,
@@ -6,7 +6,7 @@ export const initialState = [
   },
 ];
 
-export const reducer = (state, action) => {
+const todoReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TODO":
       return [
@@ -31,3 +31,6 @@ export const reducer = (state, action) => {
       return state;
   }
 };
+
+export { todo };
+export { todoReducer };

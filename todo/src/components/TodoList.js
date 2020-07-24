@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 
 //reducers
-import { todoReducer, todo } from "../reducers/reducer";
+import { todo, todoReducer } from "../reducers/reducer";
 
 //components
 import TodoForm from "./TodoForm";
@@ -9,6 +9,7 @@ import Todo from "./Todo";
 
 const TodoList = () => {
   const [state, dispatch] = useReducer(todoReducer, todo);
+  //initialState, reducer
 
   return (
     <div className="list">
