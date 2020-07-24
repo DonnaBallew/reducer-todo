@@ -1,6 +1,6 @@
 import React from "react";
 
-const Todo = ({ todo, dispatch }) => {
+function Todo({ todo, dispatch }) {
   const toggleCompleted = () => {
     dispatch({
       type: "TOGGLE_COMPLETED",
@@ -13,6 +13,6 @@ const Todo = ({ todo, dispatch }) => {
       <h3>{todo.item}</h3>
     </div>
   );
-};
+}
 
 export default Todo;
